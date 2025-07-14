@@ -1,12 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://dj8kqd37njfyv"]
+[gd_scene load_steps=20 format=3 uid="uid://dj8kqd37njfyv"]
 
 [ext_resource type="Script" uid="uid://qegkfmp2mt71" path="res://src/scripts/mundo_prueba.gd" id="1_1vi6v"]
-[ext_resource type="Texture2D" path="res://src/Assets/Mundo/bloque2.png" id="1_6c7uc"]
-[ext_resource type="Texture2D" path="res://src/Assets/Mundo/montania.png" id="2_bo0d4"]
 [ext_resource type="PackedScene" uid="uid://d1clh4nyw8eq0" path="res://src/sences/resutuque.tscn" id="2_h4q3a"]
-[ext_resource type="Texture2D" path="res://src/Assets/Mundo/world_castillo.png" id="3_wdvgm"]
-[ext_resource type="Texture2D" path="res://src/Assets/Mundo/pasto.png" id="4_0u43h"]
-[ext_resource type="Texture2D" path="res://src/Assets/Mundo/nube.png" id="5_pvpeo"]
 [ext_resource type="PackedScene" uid="uid://dqyu60546624r" path="res://src/components/BaldMan.tscn" id="6_43rgp"]
 [ext_resource type="PackedScene" uid="uid://dj6ekq2nnyxob" path="res://src/components/tuberia.tscn" id="7_cxilo"]
 [ext_resource type="PackedScene" uid="uid://dsxyx8kimjx0a" path="res://src/components/hongo1.tscn" id="8_2ykn5"]
@@ -19,12 +14,10 @@
 [ext_resource type="AudioStream" uid="uid://bgt4t5rc6gv8f" path="res://src/Assets/Sounds/dead-8bit-41400.mp3" id="16_1vi6v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_laik1"]
-texture = ExtResource("1_6c7uc")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nnr6h"]
-texture = ExtResource("2_bo0d4")
 0:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
@@ -42,7 +35,6 @@ texture = ExtResource("2_bo0d4")
 0:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehd1o"]
-texture = ExtResource("3_wdvgm")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -70,12 +62,10 @@ texture = ExtResource("3_wdvgm")
 4:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmx1y"]
-texture = ExtResource("4_0u43h")
 0:0/0 = 0
 1:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6c5gl"]
-texture = ExtResource("5_pvpeo")
 margins = Vector2i(6, 0)
 texture_region_size = Vector2i(16, 24)
 1:0/0 = 0

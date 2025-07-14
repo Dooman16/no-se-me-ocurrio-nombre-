@@ -1,12 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://bca0ubvsuejsy"]
+[gd_scene load_steps=19 format=3 uid="uid://bca0ubvsuejsy"]
 
 [ext_resource type="PackedScene" uid="uid://dd55g1kotoyaj" path="res://src/sences/menu_pausa.tscn" id="1_pk5tq"]
 [ext_resource type="PackedScene" uid="uid://d1clh4nyw8eq0" path="res://src/sences/resutuque.tscn" id="2_hluob"]
-[ext_resource type="Texture2D" path="res://src/Assets/Mundo/bloque2.png" id="3_5wd77"]
-[ext_resource type="Texture2D" path="res://src/Assets/Mundo/montania.png" id="4_m5vnk"]
-[ext_resource type="Texture2D" path="res://src/Assets/Mundo/world_castillo.png" id="5_euqxx"]
-[ext_resource type="Texture2D" path="res://src/Assets/Mundo/pasto.png" id="6_7toop"]
-[ext_resource type="Texture2D" path="res://src/Assets/Mundo/nube.png" id="7_l34b3"]
 [ext_resource type="PackedScene" uid="uid://b5o2uxluyr16g" path="res://src/components/BloqueDeLaSuerte.tscn" id="8_5rlop"]
 [ext_resource type="PackedScene" uid="uid://dqyu60546624r" path="res://src/components/BaldMan.tscn" id="9_w2qfq"]
 [ext_resource type="PackedScene" uid="uid://dj6ekq2nnyxob" path="res://src/components/tuberia.tscn" id="10_8ynj6"]
@@ -15,7 +10,6 @@
 [ext_resource type="AudioStream" uid="uid://bbn4lhb1uxq04" path="res://src/Assets/Sounds/collect-ring-15982.mp3" id="14_fwf4q"]
 [ext_resource type="AudioStream" uid="uid://bwcymij3sw0k0" path="res://src/Assets/Sounds/negative_beeps-6008.mp3" id="15_4lxvt"]
 [ext_resource type="AudioStream" uid="uid://bgt4t5rc6gv8f" path="res://src/Assets/Sounds/dead-8bit-41400.mp3" id="16_wiujm"]
-[ext_resource type="AudioStream" path="res://src/Sounds/overworld.mp3" id="17_h4sh0"]
 
 [sub_resource type="GDScript" id="GDScript_0pnil"]
 script/source = "extends Node2D
@@ -31,12 +25,10 @@ func _on_zona_nivel_1_body_entered(body: Node2D) -> void:
 "
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0pnil"]
-texture = ExtResource("3_5wd77")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pk5tq"]
-texture = ExtResource("4_m5vnk")
 0:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
@@ -54,7 +46,6 @@ texture = ExtResource("4_m5vnk")
 0:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hluob"]
-texture = ExtResource("5_euqxx")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -82,12 +73,10 @@ texture = ExtResource("5_euqxx")
 4:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5wd77"]
-texture = ExtResource("6_7toop")
 0:0/0 = 0
 1:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m5vnk"]
-texture = ExtResource("7_l34b3")
 margins = Vector2i(6, 0)
 texture_region_size = Vector2i(16, 24)
 1:0/0 = 0
@@ -240,7 +229,6 @@ stream = ExtResource("15_4lxvt")
 stream = ExtResource("16_wiujm")
 
 [node name="Background" type="AudioStreamPlayer2D" parent="Sonidos"]
-stream = ExtResource("17_h4sh0")
 volume_db = -18.933
 autoplay = true
 

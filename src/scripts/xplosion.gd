@@ -149,6 +149,8 @@ func get_mouse_vectorial_difference() -> Vector2:
 	return get_vectorial_diference(get_global_mouse_position())
 
 func get_vectorial_diference(base : Vector2) -> Vector2:
+	#COMMENT esta función es literalmente Vector2.distance_to(). Usen F1
+	#global_position.distance_to(base)
 	return base - global_position
 
 func _on_area_entered(area: Area2D) -> void:
@@ -164,7 +166,10 @@ func activate_hitbox():
 func disable_hitbox():
 	body.get_node("hitbox").disabled = true
 
-func what_to_do_if_you_hit_something(something : Node2D):	
+func what_to_do_if_you_hit_something(something : Node2D):
+	#COMMENT: Core y "NoCore" deberían ser Area2D distintos. 
+	# 	Para diferenciar meleeing podríamos usar dos colliders en la lanza uno que solo se activa al lanzar, y core solo detectaría colisiones con ese que se prende al lanzar.
+	#	El daño lo tiene que manejar una detección en core (en el enemigo), no debería ser la lanza la encargada de comunicar esto
 	var type = Enums.type.CORE if something.name == "core" and not meleeing else Enums.type.BODY
 	if type != Enums.type.BODY:
 		something = something.get_parent()
@@ -172,6 +177,7 @@ func what_to_do_if_you_hit_something(something : Node2D):
 		if something.estaVivo:
 			something.get_node("HitManager").what_to_do_if_you_get_hit(type,DAMAGE,global_position)
 			
+			#COMMENT A partir de acá se hace lo único que debería hacerse en esta función
 			var sound := AudioStreamPlayer.new()
 			sound.stream = sonido_GolpeLanza
 			add_child(sound)

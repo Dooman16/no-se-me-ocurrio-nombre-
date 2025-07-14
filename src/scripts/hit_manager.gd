@@ -14,6 +14,10 @@ func _ready():
 	actualizarBarra()
 
 func what_to_do_if_you_get_hit(type, damage, origin):
+	#COMMENT IMPORTANTE En relación con el diseño: En un principio hablamos de la idea de que el jugador pudiera hacer un parry. Al final nos decantamos por la precisión.
+	# En este caso, habría que penalizar al jugador por no ser preciso, pero tampoco tanto. 
+	# Al arrojar la lanza: Tiene sentido que no sea golpe crítico cuando no le da al cuadrado hiperpequeño, pero debería hacer algún daño significativo si pega en la cabeza, no lo sé, un tercio de la vida. También se puede usar la potencia de la lanza para decidir el daño, aunque en este caso haría que el jugador se mueva mucho más lento mientras está cargando.
+	# Melee: Estaría bueno que empuje significativamente a los enemigos, ya que los queremos a distancia para poder golpearlos arrojando. Y que no haga daño o haga mucho menos daño tiene mucho sentido, para que el jugador se centre en la mecánica que queremos que use.
 	var x_diference = managable_entity.global_position.x - origin.x
 	var knockback_direction = x_diference / abs(x_diference)
 	managable_entity.disable_hitbox(knockback_direction)
